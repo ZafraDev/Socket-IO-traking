@@ -1,0 +1,4 @@
+/api/node_modules
+/api/.env
+/test-socket-app/node_modules
+/test-socket-web/node_modules

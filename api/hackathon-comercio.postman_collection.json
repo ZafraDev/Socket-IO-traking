@@ -1,0 +1,842 @@
+{
+	"info": {
+		"_postman_id": "6727dcf6-3165-45d3-949c-2d48d4a462c4",
+		"name": "hackathon-comercio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "sign_in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rodrigo1234@gmail.com\",\r\n    \"password\": \"Rodrigo*147\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/sign_in",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"sign_in"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sign_in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"administrador@gmail.com\",\r\n    \"password\": \"Comercio1234*\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/sign_in",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"sign_in"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "700"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2bc-Yp3HSg++lS5i3IfxGPzNQJ6rJZQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Nov 2021 03:50:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"bcec53ac4535adc261e203bf6676ddcdde283ff572f0ab49c6cbbdfce31dd53830c71a3ee61153ab1356c5ece517ea85699aef32fae5f4aec4ed4cfe4aec3793e3dd9f703f3b1130aba1ee22e47d827698675a18bdfe8ec428b8268b9a073e16645577622d962d233d758f1cd263674d59f83d062614b550d0894b1dd58ee8dfcf9a8da24bd585e486000e3d0f88063128be479522a433677cc12484f5fe87f3e7d525e6ec74204fdcf1f2974f4038acbf8707dc9b4247e4ef0a9f4ec7609f5b\",\n    \"expired_in\": 1636242615000,\n    \"expired_date\": \"2021-11-06T23:50:15.000Z\",\n    \"user\": {\n        \"_id\": \"6185faa16892e7ce2067f101\",\n        \"email\": \"administrador@gmail.com\",\n        \"fullname\": \"HACKATHON COMERCIO\",\n        \"isBlocked\": false,\n        \"deleted\": false,\n        \"createdAt\": \"2021-11-06T03:46:41.298Z\",\n        \"updatedAt\": \"2021-11-06T03:46:41.298Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/auth/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/auth/profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-i9akVbTRG7Sx/lh7IGsiV9ifx0A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Nov 2021 03:56:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"6185faa16892e7ce2067f101\",\n        \"email\": \"administrador@gmail.com\",\n        \"fullname\": \"HACKATHON COMERCIO\",\n        \"isBlocked\": false,\n        \"deleted\": false,\n        \"createdAt\": \"2021-11-06T03:46:41.298Z\",\n        \"updatedAt\": \"2021-11-06T03:46:41.298Z\",\n        \"__v\": 0\n    },\n    \"message\": \"La solicitud se realizó de manera correcta\",\n    \"status\": 200,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "refresh_token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/auth/refresh_token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"refresh_token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "refresh_token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/auth/refresh_token",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"refresh_token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "793"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"319-D7kK5D/3KLjJvbT5C0Wlk6gn6ag\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Nov 2021 04:01:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"access_token\": \"bcec53ac4535adc261e203bf6676ddcdde283ff572f0ab49c6cbbdfce31dd53830c71a3ee61153ab1356c5ece517ea85699aef32fae5f4aec4ed4cfe4aec3793e3dd9f703f3b1130aba1ee22e47d827698675a18bdfe8ec428b8268b9a073e16c57b9df8c01a925cc052f52daa4c0e86256b67622d788a772a91f1afcd63e2ce6d2bf1cb7a36d05f0f2c132651c1c86452d65ec4a3d9769f23c10d11c25e4b71f770bee7febcab578bdfae30601fdcedb3d00f5b612e7a6f0d7c9ed5d8ad6721\",\n        \"expired_in\": 1636243262000,\n        \"expired_date\": \"2021-11-07T00:01:02.000Z\",\n        \"user\": {\n            \"_id\": \"6185faa16892e7ce2067f101\",\n            \"email\": \"administrador@gmail.com\",\n            \"fullname\": \"HACKATHON COMERCIO\",\n            \"isBlocked\": false,\n            \"deleted\": false,\n            \"createdAt\": \"2021-11-06T03:46:41.298Z\",\n            \"updatedAt\": \"2021-11-06T03:46:41.298Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"La solicitud se realizó de manera correcta\",\n    \"status\": 200,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "sign_up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rodrigo12@gmail.com\",\r\n    \"dni\": \"77812992\",\r\n    \"fullName\": \"Rodrigo Berrios\",\r\n    \"phone\": \"979347245\",\r\n    \"password\": \"Rodrigo*147\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/sign_up",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"sign_up"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sign_up",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rodrigo1@gmail.com\",\r\n    \"dni\": \"778129692\",\r\n    \"fullName\": \"Rodrigo Berrios\",\r\n    \"phone\": \"979347245\",\r\n    \"password\": \"Rodrigo*147\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/sign_up",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"sign_up"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "401"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"191-oXMJFnzFbpZt7k00Z8UEGB48wQQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Nov 2021 23:04:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"rodrigo1@gmail.com\",\n        \"password\": \"$2b$05$dCCu//Hg17vJYQ6X.y8wouAqu8NTVMi.dXF70AMkbzZO87xzqBssm\",\n        \"dni\": \"778129692\",\n        \"fullName\": \"RODRIGO BERRIOS\",\n        \"phone\": \"979347245\",\n        \"isBlocked\": false,\n        \"_id\": \"61870a13323dccdf46c5df92\",\n        \"createdAt\": \"2021-11-06T23:04:51.333Z\",\n        \"updatedAt\": \"2021-11-06T23:04:51.333Z\",\n        \"__v\": 0\n    },\n    \"message\": \"La solicitud se realizó de manera correcta\",\n    \"status\": 201,\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "getConfig",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/config",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"config"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getConfig",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/config",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"config"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Nov 2021 02:23:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "511"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ff-KS1WdwmPgDzyBTlEBOps6AZg5i0\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"618737f5bdadb936b37f5a5e\",\n        \"user\": \"618709df323dccdf46c5df8a\",\n        \"contacts\": [\n            {\n                \"name\": \"Rodrigo\",\n                \"phone\": \"979347245\",\n                \"_id\": \"61873808bdadb936b37f5a67\"\n            }\n        ],\n        \"messages\": [\n            {\n                \"title\": \"Ayuda\",\n                \"content\": \"Necesito ayuda, alguien me esta siguiendo\",\n                \"_id\": \"61873808bdadb936b37f5a66\"\n            }\n        ],\n        \"mainMessage\": {\n            \"content\": \"Necesito ayuda, estoy en peligro\"\n        },\n        \"createdAt\": \"2021-11-07T02:20:37.203Z\",\n        \"updatedAt\": \"2021-11-07T02:20:56.352Z\",\n        \"__v\": 0\n    },\n    \"message\": \"La solicitud se realizó de manera correcta\",\n    \"status\": 200,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "saveConfig",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"contacts\": [\r\n            {\r\n                \"name\": \"Rodrigo\" ,\r\n                \"phone\": \"979347245\"\r\n            }\r\n        ],\r\n        \"messages\": [\r\n            {\r\n                \"title\": \"Ayuda\",\r\n                \"content\": \"Necesito ayuda, alguien me esta siguiendo\"\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/config",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"config"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "saveConfig",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"contacts\": [\r\n            {\r\n                \"name\": \"Rodrigo\" ,\r\n                \"phone\": \"979347245\"\r\n            }\r\n        ],\r\n        \"messages\": [\r\n            {\r\n                \"title\": \"Ayuda\",\r\n                \"content\": \"Necesito ayuda, alguien me esta siguiendo\"\r\n            }\r\n        ],\r\n        \"mainMessage\": {\r\n            \"content\": \"Necesito ayuda, estoy en peligro\"\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/config",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"config"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "511"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ff-1HPs5qJESGBnLEAqHeNND8ixwSU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Nov 2021 02:20:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"mainMessage\": {\n            \"content\": \"Necesito ayuda, estoy en peligro\"\n        },\n        \"_id\": \"618737f5bdadb936b37f5a5e\",\n        \"user\": \"618709df323dccdf46c5df8a\",\n        \"contacts\": [\n            {\n                \"name\": \"Rodrigo\",\n                \"phone\": \"979347245\",\n                \"_id\": \"61873808bdadb936b37f5a67\"\n            }\n        ],\n        \"messages\": [\n            {\n                \"title\": \"Ayuda\",\n                \"content\": \"Necesito ayuda, alguien me esta siguiendo\",\n                \"_id\": \"61873808bdadb936b37f5a66\"\n            }\n        ],\n        \"createdAt\": \"2021-11-07T02:20:37.203Z\",\n        \"updatedAt\": \"2021-11-07T02:20:56.352Z\",\n        \"__v\": 0\n    },\n    \"message\": \"La solicitud se realizó de manera correcta\",\n    \"status\": 200,\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61881a6d5733f1c16b057a9c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000/hackathon-comercio/api"
+		},
+		{
+			"key": "token",
+			"value": "Bearer bcec53ac4535adc261e203bf6676ddcdde283ff572f0ab49c6cbbdfce31dd53830c71a3ee61153ab1356c5ece517ea85699aef32fae5f4aec4ed4cfe4aec3793e3dd9f703f3b1130aba1ee22e47d827698675a18bdfe8ec428b8268b9a073e16645577622d962d233d758f1cd263674dc8ed6033c1e1f597a2b9e464d2365c9e1d23626ac00e1789acf2fa5e6044d40f2a9f853b141ed7b07ba0135406462cdfc92aec0e22c022048035300012d59648b2947b11970f07f5ac1b5d5a02481095"
+		}
+	]
+}

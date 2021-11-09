@@ -8,16 +8,8 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZafraDev/hackathon-comercio-2021.git"
-  },
   "author": "Rodrigo Berrios",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZafraDev/hackathon-comercio-2021/issues"
-  },
-  "homepage": "https://github.com/ZafraDev/hackathon-comercio-2021#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",

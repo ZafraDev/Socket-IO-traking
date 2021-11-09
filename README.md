@@ -1,4 +1,4 @@
-# skeleton for nodejs and mongodb
+# Socket-IO-tranking
 
 ## How to install
 
